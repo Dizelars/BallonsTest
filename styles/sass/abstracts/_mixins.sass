@@ -5,3 +5,9 @@
   text-transform: uppercase
   color: $color
   cursor: pointer
+
+@mixin clearfix
+  &::after
+    content: ""
+    display: table
+    clear: both
