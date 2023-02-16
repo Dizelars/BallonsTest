@@ -154,4 +154,13 @@ body {
   text-align: center;
 }
 
+.row {
+  max-width: 114rem;
+  background: #c89393;
+  margin: 0 auto;
+}
+.row:not(:last-child) {
+  margin-bottom: 8rem;
+}
+
 /*# sourceMappingURL=style.css.map */
