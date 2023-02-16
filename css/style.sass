@@ -7,11 +7,11 @@ $color-white: #ffffff
 $color-container: #F7F7F7
 
 // Миксины Sass
-@mixin style-link
+@mixin style-link($color)
   display: inline-block
   text-decoration: none
   text-transform: uppercase
-  color: $color-gray
+  color: $color
   cursor: pointer
 
 *, ::after, ::before
@@ -78,7 +78,7 @@ body
       backface-visibility: hidden
   .btn
     &:link, &:visited
-      @include style-link
+      @include style-link($color-gray)
       position: relative
       padding: 1.5rem 4rem
       border-radius: 5rem
