@@ -24,7 +24,7 @@ body {
 .header {
   position: relative;
   height: 95vh;
-  background: linear-gradient(90.05deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url("../img/header-bg.jpg") center/cover no-repeat;
+  background: linear-gradient(90.05deg, rgba(186, 133, 84, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url("../img/header-bg.jpg") center/cover no-repeat;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
 }
 .header__logo {
@@ -43,7 +43,7 @@ body {
   text-align: center;
 }
 .header .title-first {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .header .title-first__main {
   display: block;
