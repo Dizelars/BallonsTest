@@ -1,3 +1,10 @@
+в поле Arguments пишем:
+--no-cache --update $FileName$:$FileParentDir$/css/$FileNameWithoutExtension$.css
+где $FileParentDir$/css/ - путь к папке с css.
+в поле Output paths to refresh пишем: $FileParentDir$/css/$FileNameWithoutExtension$.css
+
+и все будет работать, whather для Less и Sсss разный
+
 Немного про анимациии в CSS
 Сама анимация:
 
