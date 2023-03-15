@@ -28,4 +28,19 @@ body
     animation-duration: 1.7s
     animation-delay: .5s
     animation-timing-function: ease
-    backface-visibility: hidden
+    backface-visibility: hidden // Свойство, которое скрывает "подкапотную деятельность" лечит от глитчей.
+
+.title-secondary
+  font-size: 3.6rem
+  letter-spacing: 1rem
+  font-weight: 800
+  text-transform: uppercase
+  // Градиент для текста заголовка
+  background: linear-gradient(90.05deg, rgba($color-brown-light, 0.7) 0.03%, rgba($color-brown-dark, 0.7) 99.94%)
+  -webkit-background-clip: text // Задний фон относится только к текст + префикс для всех браузеров
+  color: transparent // Делаем текст прозрачным, чтобы увидеть фон
+  transition: all .4s
+  backface-visibility: hidden
+  &:hover
+    transform: skew(15deg, 2deg) scale(1.1)
+    text-shadow: $shadow-h2
