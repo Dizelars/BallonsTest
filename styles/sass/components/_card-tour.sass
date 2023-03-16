@@ -1,0 +1,24 @@
+.card-tour
+  position: relative
+  height: 50rem
+  perspective: 150rem // Свойство для эффекта прокручивания (отдаление сторон карточки как реального объекта)
+  -moz-perspective: 150rem // Префикс для браузера Мазилла
+  &__side
+    position: absolute
+    height: 50rem
+    width: 100%
+    top: 0
+    left: 0
+    color: white
+    transition: all .7s ease-out
+    backface-visibility: hidden // Убираем глитчи карточки с задним фоном
+    &_front
+      background: yellow
+    &_back
+      background: green
+      transform: rotateY(180deg)
+      background: linear-gradient(120deg, rgba($color-brown-light, 0.7) 0.03%, rgba($color-brown-dark, 0.7) 99.94%)
+  &:hover &__side_front // Поворот карточер при наведении, задается всему блоку с обеими сторонами,
+    transform: rotateY(180deg) // Чтобы карточки всегда крутились при наведении и отведении.
+  &:hover &__side_back
+    transform: rotateY(0deg)
