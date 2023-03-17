@@ -1,0 +1,46 @@
+.book
+  height: 50rem
+  background: linear-gradient(115deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.9) 57%, rgba(186,133,80,0.8) 57%, rgba(161,79,3,0.8) 100%), url(../../../img/bg-form.jpg) center / cover no-repeat
+  box-shadow: $box-shadow
+  border-radius: .5rem
+  overflow: hidden
+
+.form
+  width: 60%
+  padding-top: 5rem
+  padding-left: 5rem
+  &__group
+    &:not(:last-child)
+      margin-bottom: 5rem
+
+  &__input
+    padding: 1.8rem 0 1.8rem 2.2rem
+    width: 55%
+    border: none
+    border-radius: .5rem
+    border-bottom: .3rem solid transparent
+    font-weight: 400
+    font-size: $font-size-paragraph
+    letter-spacing: .2rem
+    color: $color-gray
+    background-color: $color-white
+    &:focus // Нижняя линия при фокусе зеленая
+      outline: none
+      border-bottom: .3rem solid #66D763
+      box-shadow: $box-shadow
+    &:focus:invalid // Если форма с ошибками, то другой цвет
+      border-color: #D76363
+
+  &__label
+    display: block
+    font-weight: 400
+    font-size: $font-size-paragraph
+    letter-spacing: .2rem
+    margin-top: 1rem
+    margin-left: 1.5rem
+    transition: all .7s
+
+  &__input:placeholder-shown + &__label // Пока input пустой, label скрыт. Но при взаимодействии, плавно появляется сверху.
+    opacity: 0
+    visibility: hidden
+    transform: translateY(-3rem)
